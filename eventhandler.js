@@ -17,7 +17,7 @@ setTimeout(()=>{
 },68000);
 setTimeout(()=>{
     typeWrite(message,letterMessage,typingSpeed,pauseDuration);
-},5000);
+},10000);
 
 
 async function typeWrite(message,content,typingSpeed,pauseDuration) {
