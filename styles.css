@@ -2,8 +2,8 @@
   --triangle-flap-size:50px
 }
 body{
-  margin-left: 50px;
-  margin-top: 500px;
+  margin-left: 0px;
+  margin-top: 600px;
 }
 .envelope{
   cursor: pointer;
