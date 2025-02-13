@@ -1,0 +1,89 @@
+:root{
+  --triangle-flap-size:50px
+}
+body{
+  margin-left: 300px;
+  margin-top: 50px;
+}
+.envelope{
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  animation: rumble 0.5s infinite;
+  visibility: visible;
+}
+.container,.secondary-flap{
+  background-color: #ff60d7;
+  height: 500px;
+  width: 600px;
+  margin: 50px;
+  padding: auto;
+  border-radius: 40px;
+}
+.container{
+  height: 520px;
+  width: 500px;
+  margin-left: 100px;
+  border-radius: 0px;
+  background-color: pink;
+  visibility: hidden;
+}
+.secondary-flap{
+  position: absolute;
+  margin-top: 0px;
+}
+.header{
+  text-align: center;
+  background-image: linear-gradient(to right, red,rgb(250, 83, 83),rgb(255, 189, 200));
+  background-clip: text;
+  color: transparent;
+  font-family: "Indie Flower",serif;
+  text-decoration: underline;
+  text-decoration-color: rgb(248, 53, 85);
+}
+.sub-header{
+  margin-left: 15px;
+  font-family: "Indie Flower",serif;
+}
+.triangular-flap {
+  position: absolute;
+  width: 540px;
+  box-sizing: border-box;
+  border-left: calc(var(--triangle-flap-size)*2)solid transparent;
+  border-right: calc(var(--triangle-flap-size)*2) solid transparent;
+  border-top: calc(var(--triangle-flap-size)*6) solid #ff8ee3;
+  margin-left: 80px;
+  transition: transform 0.5s ease-out;
+  animation: fadeOut 1s forwards;
+  z-index: 1;
+  background-color: #ff60d7;
+}
+.secondary-flap{
+  background-color: #ff60d7;
+}
+.letter-message{
+  margin-left: 5px;
+  text-align: justify;
+  padding-left: 10px;
+  font-family: "Indie Flower",serif;
+  padding-right: 10px;
+}
+.gratitude,.designation{
+  margin-left: 10px;
+  font-family: "Indie Flower",serif;
+  transition: width 0.5s ease-in-out;
+}
+.designation{
+  margin-top: -10px;
+}
+@keyframes fadeOut{
+  to{
+    background-color: transparent;
+  }
+}
+@keyframes rumble {
+  0%{transform: translate(0,0);}
+  25%{transform: translate(-2px,-2px)rotate(-1deg);}
+  50%{transform: translate(2px,2px)rotate(1deg);}
+  75%{transform: translate(-1px,1px)rotate(0.5deg);}
+  100%{transform: translate(0,0);}
+}
